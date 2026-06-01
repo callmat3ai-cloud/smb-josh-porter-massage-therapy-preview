@@ -1,434 +1,1860 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Josh Porter Massage Therapy | Edgewood, TX</title>
-  <meta name="description" content="Josh Porter Massage Therapy — professional Cleaning Service services in Edgewood, TX." />
-  <meta property="og:title" content="Josh Porter Massage Therapy | Edgewood, TX" />
-  <meta property="og:description" content="Professional Cleaning Service services in Edgewood, TX." />
-  <meta property="og:image" content="/tmp/agy_images/JOSH-PORTER-MASSAGE-0601/hero.webp" />
-  <meta property="og:type" content="website" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Josh Porter Massage Therapy | Edgewood, TX | Therapeutic Massage Services</title>
+  <meta name="description" content="Professional massage therapy in Edgewood, TX by Josh Porter. Offering deep tissue, Swedish, sports massage, prenatal, trigger point therapy, hot stone, and myofascial release. By appointment only. Book today!">
+  <meta name="keywords" content="massage therapy Edgewood TX, Josh Porter, deep tissue massage, Swedish massage, sports massage, prenatal massage, trigger point therapy, hot stone massage, myofascial release, Edgewood Texas massage therapist">
+  <meta name="author" content="Josh Porter">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://joshportermassage.com/">
+  <meta property="og:title" content="Josh Porter Massage Therapy | Edgewood, TX">
+  <meta property="og:description" content="Experience professional, customized therapeutic massage. Serving Edgewood, TX and surrounding areas. Swedish, deep tissue, prenatal, and more. By appointment only.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1200&h=630&q=80">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://joshportermassage.com/">
+  <meta property="twitter:title" content="Josh Porter Massage Therapy | Edgewood, TX">
+  <meta property="twitter:description" content="Experience professional, customized therapeutic massage. Serving Edgewood, TX and surrounding areas. Swedish, deep tissue, prenatal, and more. By appointment only.">
+  <meta property="twitter:image" content="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=1200&h=630&q=80">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+
   <style>
-    /* ===== RESET ===== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: 'Sora', sans-serif;
-      color: #2a1f1a;
-      background: #FDFAF6;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
-
+    /* CSS Variables & Design System */
     :root {
-      --accent:      #0e9f6e;
-      --accent-dark: #047857;
-      --accent-bg:   #0e9f6e14;
-      --ink:         #2a1f1a;
-      --ink-2:       #6b5c50;
-      --ink-3:       #a09590;
-      --cream-1:     #FDFAF6;
-      --cream-2:     #F5EFE6;
-      --cream-3:     #EDE5D8;
-      --border:      #e5ddd5;
-      --white:       #ffffff;
+      /* Retro warm palette */
+      --bg-cream: #FAF5EF;
+      --bg-cream-dark: #F0E6D8;
+      --bg-terracotta: #D35400;
+      --bg-terracotta-light: #E67E22;
+      --bg-terracotta-dark: #A04000;
+      --primary-brown: #3E2723;
+      --primary-brown-light: #5D4037;
+      --primary-brown-dark: #27120C;
+      --accent-mustard: #E9C46A;
+      --accent-sage: #81B29A;
+      
+      /* Typography */
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      
+      /* Layout & Animation */
+      --transition-base: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      --border-thick: 3px solid var(--primary-brown);
+      --border-thin: 1.5px solid var(--primary-brown);
+      --shadow-retro: 4px 4px 0px 0px var(--primary-brown);
+      --shadow-retro-hover: 8px 8px 0px 0px var(--primary-brown);
+      --shadow-retro-button: 3px 3px 0px 0px var(--primary-brown-dark);
+      --shadow-retro-button-hover: 1px 1px 0px 0px var(--primary-brown-dark);
     }
 
-    img { max-width: 100%; display: block; }
-    a { color: inherit; text-decoration: none; }
-
-    /* ===== TOP BAR ===== */
-    .topbar {
-      background: var(--white);
-      border-bottom: 1px solid var(--border);
-      padding: clamp(12px, 3vw, 16px) clamp(16px, 5vw, 48px);
-    }
-    .topbar-inner {
-      max-width: 960px; margin: 0 auto;
-      display: flex; align-items: center; justify-content: space-between; gap: 16px;
-    }
-    .topbar-brand { font-size: clamp(0.9rem, 3vw, 1.05rem); font-weight: 700; color: var(--ink); }
-    .topbar-phone {
-      display: inline-flex; align-items: center; gap: 6px;
-      background: var(--accent);
-      color: #fff;
-      font-size: clamp(0.75rem, 2.5vw, 0.88rem);
-      font-weight: 700;
-      padding: clamp(7px, 2vw, 10px) clamp(14px, 3vw, 20px);
-      border-radius: 99px;
-      transition: background 0.15s;
-    }
-    .topbar-phone:hover { background: var(--accent-dark); }
-
-    /* ===== HERO — split layout, business image left ===== */
-    .hero {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      min-height: clamp(380px, 60vw, 560px);
-    }
-    .hero-img-col {
-      background-image: url('/tmp/agy_images/JOSH-PORTER-MASSAGE-0601/hero.webp');
-      background-size: cover;
-      background-position: center;
-      min-height: clamp(200px, 35vw, 320px);
-    }
-    .hero-text-col {
-      background: var(--white);
-      display: flex; flex-direction: column; justify-content: center;
-      padding: clamp(32px, 6vw, 64px) clamp(24px, 5vw, 56px);
-    }
-    .hero-badge {
-      display: inline-block;
-      background: var(--accent-bg);
-      color: var(--accent);
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 4px 10px;
-      border-radius: 4px;
-      margin-bottom: clamp(14px, 3vw, 20px);
-    }
-    .hero h1 {
-      font-size: clamp(1.8rem, 5vw, 3rem);
-      font-weight: 700;
-      color: var(--ink);
-      line-height: 1.12;
-      letter-spacing: -0.02em;
-      margin-bottom: clamp(10px, 2vw, 14px);
-    }
-    .hero-sub {
-      font-size: clamp(0.88rem, 2.5vw, 1.05rem);
-      color: var(--ink-2);
-      margin-bottom: clamp(18px, 3vw, 26px);
-      line-height: 1.55;
-    }
-    .hero-rating {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 0.85rem;
-      color: var(--ink-2);
-      margin-bottom: clamp(20px, 4vw, 28px);
-      display: none;
-    }
-    .hero-stars { color: #f59e0b; letter-spacing: 1px; }
-    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
-    .btn-primary {
-      display: inline-flex; align-items: center; gap: 7px;
-      background: var(--accent);
-      color: #fff;
-      font-size: clamp(0.82rem, 2.5vw, 0.95rem);
-      font-weight: 700;
-      padding: clamp(10px, 2vw, 13px) clamp(16px, 3.5vw, 22px);
-      border-radius: 8px;
-      transition: background 0.15s, transform 0.15s;
-    }
-    .btn-primary:hover { background: var(--accent-dark); transform: translateY(-1px); }
-    .btn-outline {
-      display: inline-flex; align-items: center; gap: 7px;
-      background: transparent;
-      color: var(--ink);
-      border: 1.5px solid var(--border);
-      font-size: clamp(0.82rem, 2.5vw, 0.95rem);
-      font-weight: 600;
-      padding: clamp(10px, 2vw, 13px) clamp(16px, 3.5vw, 22px);
-      border-radius: 8px;
-      transition: border-color 0.15s, color 0.15s;
-    }
-    .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
-
-    /* ===== WRAP ===== */
-    .wrap { max-width: 960px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 48px); }
-    .wrap--narrow { max-width: 680px; }
-
-    /* ===== SECTIONS ===== */
-    .section { padding: clamp(48px, 8vw, 80px) 0; }
-    .section--tinted { background: var(--cream-2); }
-    .section--white  { background: var(--white); }
-    .section-header { margin-bottom: clamp(24px, 4vw, 36px); }
-    .section-label {
-      font-size: 0.68rem;
-      font-weight: 700;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 6px;
-    }
-    .section-title {
-      font-size: clamp(1.4rem, 4vw, 2rem);
-      font-weight: 700;
-      color: var(--ink);
-      line-height: 1.2;
+    /* Reset & Base Styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    /* ===== SERVICES — illustrated cards ===== */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
-      gap: clamp(14px, 2.5vw, 20px);
-    }
-    .service-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: clamp(20px, 3.5vw, 28px);
-      transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
-    }
-    .service-card:hover {
-      box-shadow: 0 8px 32px rgba(42, 31, 26, 0.1);
-      transform: translateY(-4px);
-      border-color: var(--accent);
-    }
-    .service-icon {
-      font-size: clamp(1.6rem, 4vw, 2.2rem);
-      line-height: 1;
-      margin-bottom: clamp(12px, 2vw, 16px);
-    }
-    .service-card h3 {
-      font-size: clamp(0.88rem, 2.5vw, 1rem);
-      font-weight: 600;
-      color: var(--ink);
-      margin-bottom: 6px;
-      line-height: 1.3;
-    }
-    .service-card p {
-      font-size: clamp(0.78rem, 2vw, 0.85rem);
-      color: var(--ink-2);
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-cream);
+      color: var(--primary-brown);
+      font-family: var(--font-body);
+      font-size: 16px;
       line-height: 1.6;
     }
 
-    /* ===== INFO STRIP ===== */
-    .info-strip {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
-      gap: clamp(12px, 2vw, 16px);
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: clamp(20px, 3.5vw, 28px);
+    body {
+      overflow-x: hidden;
+      position: relative;
     }
-    .info-item {}
-    .info-item-label {
-      font-size: 0.65rem;
+
+    /* Selection Color */
+    ::selection {
+      background-color: var(--bg-terracotta);
+      color: var(--bg-cream);
+    }
+
+    /* Base Typography */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-display);
+      font-weight: 800;
+      line-height: 1.1;
+      color: var(--primary-brown-dark);
+    }
+
+    p {
+      font-weight: 400;
+      color: var(--primary-brown-light);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition-base);
+    }
+
+    button, input, textarea {
+      font-family: inherit;
+    }
+
+    /* Main Container Utilities */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 6rem 0;
+      position: relative;
+    }
+
+    /* Header & Navigation */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      padding: 1.5rem 0;
+      transition: var(--transition-base);
+    }
+
+    header.scrolled {
+      padding: 0.8rem 0;
+      background-color: rgba(250, 245, 239, 0.95);
+      border-bottom: var(--border-thin);
+      box-shadow: 0 4px 30px rgba(62, 39, 35, 0.03);
+      backdrop-filter: blur(10px);
+    }
+
+    .nav-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo-dot {
+      width: 12px;
+      height: 12px;
+      background-color: var(--bg-terracotta);
+      border-radius: 50%;
+      border: 1.5px solid var(--primary-brown);
+      display: inline-block;
+    }
+
+    .nav-menu {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-link {
+      font-size: 0.95rem;
+      font-weight: 600;
+      position: relative;
+      padding: 0.25rem 0;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--bg-terracotta);
+      transition: var(--transition-base);
+    }
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .nav-btn {
+      background-color: var(--bg-terracotta);
+      color: var(--bg-cream);
+      padding: 0.6rem 1.2rem;
+      border-radius: 4px;
+      border: var(--border-thin);
+      box-shadow: var(--shadow-retro-button);
       font-weight: 700;
-      letter-spacing: 0.1em;
+      font-size: 0.9rem;
+    }
+
+    .nav-btn:hover {
+      transform: translate(-1px, -1px);
+      box-shadow: var(--shadow-retro-button-hover);
+      background-color: var(--bg-terracotta-light);
+    }
+
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0.5rem;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 25px;
+      height: 3px;
+      background-color: var(--primary-brown);
+      margin: 5px 0;
+      transition: var(--transition-base);
+    }
+
+    /* Hero Section (Asymmetric Retro Design) */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding-top: 8rem;
+      position: relative;
+      overflow: hidden;
+      background-image: radial-gradient(var(--bg-cream-dark) 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 4rem;
+      align-items: center;
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background-color: var(--accent-mustard);
+      color: var(--primary-brown-dark);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: var(--ink-3);
-      margin-bottom: 6px;
+      border: var(--border-thin);
+      margin-bottom: 2rem;
+      box-shadow: 2px 2px 0px var(--primary-brown);
+      transform: rotate(-1.5deg);
     }
-    .info-item-value {
-      font-size: clamp(0.88rem, 2.5vw, 0.98rem);
-      color: var(--ink);
-      font-weight: 500;
-      line-height: 1.45;
+
+    .hero-title {
+      font-size: clamp(3rem, 5vw, 4.8rem);
+      line-height: 0.95;
+      margin-bottom: 1.5rem;
+      letter-spacing: -2px;
     }
-    .info-item a.info-link {
-      color: var(--accent);
+
+    .hero-title span {
+      color: var(--bg-terracotta);
+      font-style: italic;
       font-weight: 600;
     }
-    .info-item a.info-link:hover { opacity: 0.8; }
 
-    /* ===== MAP ===== */
-    .map-wrap {
-      border-radius: 16px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      margin-top: clamp(16px, 3vw, 24px);
+    .hero-subtitle {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      margin-bottom: 2.5rem;
+      max-width: 520px;
     }
-    .map-wrap iframe { width: 100%; height: clamp(200px, 28vw, 280px); border: 0; display: block; }
 
-    /* ===== FOOTER ===== */
-    footer {
-      background: var(--ink);
-      padding: clamp(28px, 5vw, 44px) clamp(16px, 4vw, 48px);
-      text-align: center;
+    /* Retro Badge CTA Combo */
+    .hero-cta-container {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
-    .footer-inner { max-width: 960px; margin: 0 auto; }
-    footer p { font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.8; }
-    footer a { color: rgba(255,255,255,0.6); transition: color 0.15s; }
-    footer a:hover { color: rgba(255,255,255,0.9); }
 
-    /* ===== STICKY BAR ===== */
-    .sticky-bar {
-      position: fixed; bottom: 0; left: 0; right: 0;
-      background: rgba(253, 250, 246, 0.97);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      border-top: 1px solid var(--border);
-      padding: clamp(10px, 2vw, 14px) clamp(16px, 4vw, 24px);
-      display: flex; align-items: center; justify-content: space-between; gap: 12px;
-      z-index: 100;
-      box-shadow: 0 -4px 24px rgba(42, 31, 26, 0.08);
-    }
-    .sticky-bar-info { min-width: 0; }
-    .sticky-bar-name {
-      font-size: clamp(0.8rem, 2.5vw, 0.9rem);
-      font-weight: 700;
-      color: var(--ink);
-      white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
-    }
-    .sticky-bar-phone { font-size: clamp(0.7rem, 2vw, 0.78rem); color: var(--ink-2); }
-    .sticky-cta {
-      background: var(--accent);
-      color: #fff;
-      font-weight: 700;
-      font-size: clamp(0.8rem, 2.5vw, 0.9rem);
-      padding: clamp(8px, 2vw, 11px) clamp(16px, 3vw, 22px);
+    .btn-main {
+      font-family: var(--font-body);
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background-color: var(--bg-terracotta);
+      color: var(--bg-cream);
+      padding: 1.2rem 2.2rem;
+      border: var(--border-thick);
       border-radius: 8px;
-      white-space: nowrap; flex-shrink: 0;
-      display: flex; align-items: center; gap: 6px;
-      transition: background 0.15s;
+      box-shadow: var(--shadow-retro);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.8rem;
+      transition: var(--transition-base);
+      position: relative;
+      overflow: hidden;
     }
-    .sticky-cta:hover { background: var(--accent-dark); }
-    .pad-bottom { height: clamp(64px, 10vw, 80px); }
 
-    /* ===== MOBILE — stack hero ===== */
-    @media (max-width: 640px) {
-      .hero {
+    .btn-main:hover {
+      transform: translate(-4px, -4px);
+      box-shadow: var(--shadow-retro-hover);
+      background-color: var(--bg-terracotta-light);
+    }
+
+    .btn-main:active {
+      transform: translate(0px, 0px);
+      box-shadow: none;
+    }
+
+    .badge-stamp {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 100px;
+      background-color: var(--bg-cream-dark);
+      border: 2px dashed var(--bg-terracotta);
+      border-radius: 50%;
+      text-align: center;
+      transform: rotate(12deg);
+      font-family: var(--font-display);
+      font-size: 0.75rem;
+      font-weight: 800;
+      color: var(--bg-terracotta-dark);
+      line-height: 1.1;
+      padding: 0.5rem;
+      box-shadow: 2px 4px 10px rgba(0,0,0,0.05);
+      animation: spin-slow 20s linear infinite;
+    }
+
+    @keyframes spin-slow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .hero-image-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-image-container {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      aspect-ratio: 4 / 5;
+      background-color: var(--accent-mustard);
+      border: var(--border-thick);
+      border-radius: 12px;
+      box-shadow: 12px 12px 0px 0px var(--primary-brown);
+      overflow: hidden;
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* Vintage warm sepia filter */
+      filter: sepia(0.35) contrast(1.1) brightness(0.95) saturate(1.05);
+      transition: var(--transition-base);
+    }
+
+    .hero-image-container:hover .hero-img {
+      transform: scale(1.05);
+      filter: sepia(0.15) contrast(1.15) brightness(1) saturate(1.15);
+    }
+
+    /* Retro overlay sticker */
+    .retro-sticker {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      background-color: var(--accent-sage);
+      color: var(--primary-brown-dark);
+      padding: 0.8rem 1.5rem;
+      border: var(--border-thick);
+      border-radius: 4px;
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 1.1rem;
+      transform: rotate(-8deg);
+      box-shadow: 4px 4px 0px var(--primary-brown);
+      z-index: 20;
+    }
+
+    /* Section Headings */
+    .section-header {
+      margin-bottom: 4rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .section-tag {
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--bg-terracotta);
+      letter-spacing: 0.15em;
+      margin-bottom: 0.8rem;
+      display: inline-block;
+    }
+
+    .section-title {
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      letter-spacing: -1px;
+    }
+
+    .section-title span {
+      font-style: italic;
+      color: var(--bg-terracotta);
+      font-weight: 500;
+    }
+
+    /* Services Section (Asymmetric Bordered Cards) */
+    .services-section {
+      background-color: var(--bg-cream-dark);
+      border-top: var(--border-thick);
+      border-bottom: var(--border-thick);
+      position: relative;
+    }
+
+    .services-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background-color: var(--accent-mustard);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 2.5rem;
+      margin-top: 1rem;
+    }
+
+    .service-card {
+      background-color: var(--bg-cream);
+      border: var(--border-thick);
+      border-radius: 8px;
+      padding: 2.5rem 2rem;
+      box-shadow: var(--shadow-retro);
+      transition: var(--transition-base);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .service-card:hover {
+      transform: translate(-6px, -6px) rotate(-0.5deg);
+      box-shadow: var(--shadow-retro-hover);
+      border-color: var(--bg-terracotta);
+    }
+
+    .service-icon-wrapper {
+      width: 64px;
+      height: 64px;
+      background-color: var(--bg-cream-dark);
+      border: var(--border-thin);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      color: var(--bg-terracotta);
+      transition: var(--transition-base);
+    }
+
+    .service-card:hover .service-icon-wrapper {
+      background-color: var(--bg-terracotta);
+      color: var(--bg-cream);
+      transform: rotate(6deg);
+    }
+
+    .service-icon-wrapper svg {
+      width: 32px;
+      height: 32px;
+      fill: currentColor;
+    }
+
+    .service-title {
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+
+    .service-desc {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .service-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px dashed var(--primary-brown-light);
+      padding-top: 1rem;
+      margin-top: auto;
+    }
+
+    .service-duration {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .service-price {
+      font-size: 1.25rem;
+      font-weight: 800;
+      font-family: var(--font-display);
+      color: var(--primary-brown-dark);
+    }
+
+    .appointment-notice {
+      text-align: center;
+      margin-top: 4rem;
+      padding: 2rem;
+      background-color: var(--accent-mustard);
+      border: var(--border-thick);
+      border-radius: 8px;
+      box-shadow: var(--shadow-retro);
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+      transform: rotate(0.5deg);
+    }
+
+    .appointment-notice h4 {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* About Section (Timeline Layout) */
+    .about-container {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 5rem;
+      align-items: flex-start;
+    }
+
+    .about-sticky-side {
+      position: sticky;
+      top: 120px;
+    }
+
+    .about-badge {
+      display: inline-block;
+      background-color: var(--accent-sage);
+      color: var(--primary-brown-dark);
+      padding: 0.4rem 1rem;
+      border-radius: 4px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border: var(--border-thin);
+      margin-bottom: 1.5rem;
+      transform: rotate(-2deg);
+    }
+
+    .about-lead {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      color: var(--primary-brown-dark);
+      margin-bottom: 2rem;
+      font-weight: 600;
+    }
+
+    .about-text {
+      margin-bottom: 2.5rem;
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    .about-image-collage {
+      position: relative;
+      margin-top: 3rem;
+      width: 100%;
+      height: 300px;
+    }
+
+    .collage-img-1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 65%;
+      height: 220px;
+      object-fit: cover;
+      border: var(--border-thick);
+      border-radius: 8px;
+      transform: rotate(-3deg);
+      box-shadow: 6px 6px 0px var(--primary-brown);
+      filter: sepia(0.2) contrast(1.1) brightness(0.95);
+      z-index: 2;
+    }
+
+    .collage-img-2 {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 55%;
+      height: 180px;
+      object-fit: cover;
+      border: var(--border-thick);
+      border-radius: 8px;
+      transform: rotate(4deg);
+      box-shadow: 6px 6px 0px var(--primary-brown);
+      filter: sepia(0.2) contrast(1.1) brightness(0.95);
+      z-index: 1;
+    }
+
+    /* Timeline Styling */
+    .timeline {
+      position: relative;
+      padding-left: 2.5rem;
+      margin-top: 1rem;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7.5px;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background-color: var(--primary-brown);
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 3.5rem;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      left: -2.5rem;
+      top: 0.25rem;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: var(--bg-terracotta);
+      border: var(--border-thick);
+      z-index: 2;
+      transition: var(--transition-base);
+    }
+
+    .timeline-item:hover .timeline-dot {
+      background-color: var(--accent-mustard);
+      transform: scale(1.3);
+    }
+
+    .timeline-year {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--bg-terracotta-dark);
+      margin-bottom: 0.5rem;
+      display: inline-block;
+      background-color: var(--bg-cream-dark);
+      padding: 0.1rem 0.6rem;
+      border-radius: 4px;
+      border: var(--border-thin);
+    }
+
+    .timeline-title {
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .timeline-desc {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    /* Testimonials Section (Masonry Retro Card Grid) */
+    .testimonials-section {
+      background-color: var(--primary-brown-dark);
+      color: var(--bg-cream);
+      border-top: var(--border-thick);
+      border-bottom: var(--border-thick);
+      position: relative;
+      background-image: radial-gradient(rgba(250, 245, 239, 0.05) 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    .testimonials-section .section-title {
+      color: var(--bg-cream);
+    }
+
+    .testimonials-section .section-title span {
+      color: var(--accent-mustard);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .testimonial-card {
+      background-color: var(--primary-brown);
+      border: 2px solid var(--bg-cream-dark);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 6px 6px 0px var(--bg-terracotta);
+      transition: var(--transition-base);
+      position: relative;
+    }
+
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 10px 10px 0px var(--accent-mustard);
+      border-color: var(--accent-mustard);
+    }
+
+    .quote-icon {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      font-size: 4rem;
+      font-family: var(--font-display);
+      color: rgba(250, 245, 239, 0.08);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .rating-stars {
+      display: flex;
+      gap: 0.25rem;
+      margin-bottom: 1.2rem;
+      color: var(--accent-mustard);
+    }
+
+    .rating-stars svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    .testimonial-text {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      font-style: italic;
+      color: var(--bg-cream-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .author-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: var(--border-thin);
+      background-color: var(--bg-cream-dark);
+      color: var(--primary-brown);
+      font-weight: 800;
+      font-family: var(--font-display);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .author-info h5 {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--bg-cream);
+    }
+
+    .author-info p {
+      font-size: 0.8rem;
+      color: var(--accent-mustard);
+    }
+
+    /* Contact Section (Retro Layout Split) */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.15fr;
+      gap: 5rem;
+      align-items: stretch;
+    }
+
+    .contact-info-wrap {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .contact-card {
+      background-color: var(--bg-cream-dark);
+      border: var(--border-thick);
+      border-radius: 8px;
+      padding: 2.5rem;
+      box-shadow: var(--shadow-retro);
+      margin-bottom: 2rem;
+      transform: rotate(-1deg);
+    }
+
+    .contact-details {
+      list-style: none;
+      margin-top: 1.5rem;
+    }
+
+    .contact-details li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+    }
+
+    .contact-details li:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-icon-box {
+      width: 38px;
+      height: 38px;
+      background-color: var(--bg-terracotta);
+      border-radius: 4px;
+      border: var(--border-thin);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--bg-cream);
+      flex-shrink: 0;
+    }
+
+    .contact-icon-box svg {
+      width: 18px;
+      height: 18px;
+      fill: currentColor;
+    }
+
+    .contact-details span {
+      font-weight: 700;
+      display: block;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary-brown-light);
+    }
+
+    .contact-details a:hover {
+      color: var(--bg-terracotta);
+    }
+
+    /* Retro Form Styling */
+    .contact-form-wrap {
+      background-color: var(--bg-cream);
+      border: var(--border-thick);
+      border-radius: 12px;
+      padding: 3.5rem 3rem;
+      box-shadow: var(--shadow-retro-hover);
+      position: relative;
+    }
+
+    .form-group-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
+      color: var(--primary-brown-dark);
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 1rem 1.2rem;
+      background-color: var(--bg-cream);
+      border: var(--border-thick);
+      border-radius: 6px;
+      color: var(--primary-brown-dark);
+      font-size: 1rem;
+      font-weight: 600;
+      transition: var(--transition-base);
+    }
+
+    .form-control:focus {
+      outline: none;
+      border-color: var(--bg-terracotta);
+      background-color: #fff;
+      box-shadow: 3px 3px 0px 0px var(--accent-mustard);
+    }
+
+    textarea.form-control {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-submit-btn {
+      width: 100%;
+      font-family: var(--font-body);
+      font-weight: 800;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      background-color: var(--bg-terracotta);
+      color: var(--bg-cream);
+      padding: 1.2rem;
+      border: var(--border-thick);
+      border-radius: 6px;
+      box-shadow: var(--shadow-retro);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: var(--transition-base);
+    }
+
+    .form-submit-btn:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: var(--shadow-retro-hover);
+      background-color: var(--bg-terracotta-light);
+    }
+
+    .form-submit-btn:active {
+      transform: translate(0px, 0px);
+      box-shadow: none;
+    }
+
+    /* Map Box styling */
+    .map-box {
+      border: var(--border-thick);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow-retro);
+      height: 250px;
+      position: relative;
+    }
+
+    .map-box iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      filter: grayscale(0.2) contrast(1.1) sepia(0.1);
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--primary-brown-dark);
+      color: var(--bg-cream);
+      padding: 5rem 0 2.5rem;
+      border-top: var(--border-thick);
+      font-size: 0.95rem;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 1fr;
+      gap: 4rem;
+      margin-bottom: 4rem;
+      width: 90%;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .footer-about h3 {
+      color: var(--bg-cream);
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-about p {
+      color: var(--bg-cream-dark);
+      margin-bottom: 1.5rem;
+      max-width: 320px;
+    }
+
+    .footer-links h4, .footer-hours h4 {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-mustard);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-links-list {
+      list-style: none;
+    }
+
+    .footer-links-list li {
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-links-list a {
+      color: var(--bg-cream-dark);
+    }
+
+    .footer-links-list a:hover {
+      color: var(--accent-mustard);
+      padding-left: 5px;
+    }
+
+    .hours-list {
+      list-style: none;
+      color: var(--bg-cream-dark);
+    }
+
+    .hours-list li {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.8rem;
+      border-bottom: 1px dashed rgba(250, 245, 239, 0.1);
+      padding-bottom: 0.4rem;
+    }
+
+    .hours-list li span:last-child {
+      font-weight: 700;
+      color: var(--bg-cream);
+    }
+
+    .footer-bottom {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(250, 245, 239, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      color: var(--bg-cream-dark);
+    }
+
+    .footer-bottom p {
+      color: inherit;
+    }
+
+    /* Scroll Triggered Animations with IntersectionObserver */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-50px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal-right {
+      opacity: 0;
+      transform: translateX(50px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .reveal.active, .reveal-left.active, .reveal-right.active {
+      opacity: 1;
+      transform: translate(0);
+    }
+
+    /* Staggered card loading speeds */
+    .stagger-1 { transition-delay: 0.1s; }
+    .stagger-2 { transition-delay: 0.2s; }
+    .stagger-3 { transition-delay: 0.3s; }
+    .stagger-4 { transition-delay: 0.4s; }
+
+    /* Success Message State */
+    .form-success-message {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: var(--bg-cream);
+      border-radius: 12px;
+      z-index: 10;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 3rem;
+    }
+
+    .success-icon {
+      width: 80px;
+      height: 80px;
+      background-color: var(--accent-sage);
+      border: var(--border-thick);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--primary-brown-dark);
+      margin-bottom: 2rem;
+    }
+
+    .success-icon svg {
+      width: 40px;
+      height: 40px;
+      fill: currentColor;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 992px) {
+      .hero-grid {
         grid-template-columns: 1fr;
-        min-height: unset;
+        gap: 3.5rem;
+        text-align: center;
       }
-      .hero-img-col { min-height: clamp(200px, 50vw, 280px); }
-      .hero-text-col { padding: clamp(24px, 6vw, 36px) clamp(16px, 5vw, 24px); }
-      .services-grid { grid-template-columns: 1fr; }
-      .info-strip { grid-template-columns: 1fr; }
+
+      .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .hero-cta-container {
+        justify-content: center;
+      }
+
+      .about-container {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+      }
+
+      .about-sticky-side {
+        position: static;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
     }
 
-    @media (max-width: 380px) {
-      .topbar-inner { flex-wrap: wrap; }
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        gap: 0;
+        flex-direction: column;
+        background-color: var(--bg-cream);
+        border-right: var(--border-thick);
+        width: 80%;
+        max-width: 320px;
+        height: 100vh;
+        padding: 6rem 2rem 2rem;
+        box-shadow: 10px 0 0 rgba(62, 39, 35, 0.05);
+        transition: 0.4s ease;
+        align-items: flex-start;
+      }
+
+      .nav-menu.active {
+        left: 0;
+      }
+
+      .nav-menu li {
+        width: 100%;
+        margin-bottom: 1.5rem;
+      }
+
+      .nav-link {
+        font-size: 1.2rem;
+        display: block;
+        padding: 0.5rem 0;
+      }
+
+      .hamburger {
+        display: block;
+        z-index: 1010;
+      }
+
+      .hamburger.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .hamburger.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+
+      .form-group-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
     }
 
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
-      html { scroll-behavior: auto; }
+    @media (max-width: 480px) {
+      .hero-cta-container {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .btn-main {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .contact-form-wrap {
+        padding: 2rem 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
 
-<!-- ===== TOP BAR ===== -->
-<div class="topbar">
-  <div class="topbar-inner">
-    <div class="topbar-brand">Josh Porter Massage Therapy</div>
-    <a href="tel:+1 903-603-0144" class="topbar-phone">📞 +1 903-603-0144</a>
-  </div>
-</div>
+  <!-- Header -->
+  <header id="site-header">
+    <div class="nav-container">
+      <a href="#hero" class="logo" aria-label="Josh Porter Massage Therapy Homepage">
+        <span class="logo-dot"></span>
+        JOSH PORTER
+      </a>
+      
+      <button class="hamburger" id="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
-<!-- ===== HERO ===== -->
-<section class="hero">
-  <div class="hero-text-col">
-    <div class="hero-badge">Cleaning Service</div>
-    <h1>Josh Porter Massage Therapy</h1>
-    <p class="hero-sub">Professional Cleaning Service services in Edgewood, TX. Reliable, thorough, and built on genuine 5-star reviews.</p>
-    <div class="hero-rating" style="display: none;">
-      <span class="hero-stars">★★★★★</span>
-      <span> ·  Google reviews</span>
+      <ul class="nav-menu" id="nav-links">
+        <li><a href="#hero" class="nav-link">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="tel:+19036030144" class="nav-btn">Call: 903-603-0144</a></li>
+      </ul>
     </div>
-    <div class="hero-actions">
-      <a href="tel:+1 903-603-0144" class="btn-primary">📞 Call Now</a>
-      <a href="#" target="_blank" rel="noopener" class="btn-outline">📍 See on Google</a>
-    </div>
-  </div>
-  <div class="hero-img-col" aria-hidden="true"></div>
-</section>
+  </header>
 
-<!-- ===== SERVICES ===== -->
-<section class="section section--tinted">
-  <div class="wrap">
-    <div class="section-header">
-      <div class="section-label">What We Do</div>
-      <h2 class="section-title">Our Services</h2>
-    </div>
-    <div class="services-grid">
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-grid">
+        <div class="hero-content reveal-left">
+          <div class="hero-badge">
+            <svg style="width:16px;height:16px;" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12S6.5 22 12 22 22 17.5 22 12 17.5 2 12 2M12 20C7.6 20 4 16.4 4 12S7.6 4 12 4 20 7.6 20 12 16.4 20 12 20M12.5 7H11V13L16.2 16.2L17 14.9L12.5 12.2V7Z"/></svg>
+            By Appointment Only
+          </div>
+          <h1 class="hero-title">Customized <span>Bodywork</span> for Lasting Relief.</h1>
+          <p class="hero-subtitle">Professional clinical and therapeutic massage tailored to relieve tension, eliminate pain, and restore your body's natural state of balance. Located in Edgewood, TX.</p>
+          
+          <div class="hero-cta-container">
+            <a href="#contact" class="btn-main">
+              Book Appointment
+              <svg style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="currentColor" d="M4,15V9H8L13,4V20L8,15H4M19,12C19,10.1 17.9,8.5 16.2,7.7L15.4,9.2C16.4,9.7 17,10.8 17,12C17,13.2 16.4,14.3 15.4,14.8L16.2,16.3C17.9,15.5 19,13.9 19,12Z"/></svg>
+            </a>
+            <div class="badge-stamp">
+              <span>EST. 2021<br>— • —<br>EDGEWOOD</span>
+            </div>
+          </div>
+        </div>
 
-    <div class="service-card">
-      <div class="service-icon">🧹</div>
-      <h3>Regular Home Cleaning</h3>
-      <p>Weekly or bi-weekly cleaning to keep your home spotless and fresh.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🧹</div>
-      <h3>Deep Cleaning</h3>
-      <p>Thorough top-to-bottom cleaning for kitchens, bathrooms, and all living areas.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🧹</div>
-      <h3>Move-In / Move-Out Clean</h3>
-      <p>Get your space move-in ready or leave it spotless when you go.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🧹</div>
-      <h3>Office & Commercial Clean</h3>
-      <p>Keep your workspace professional, sanitized, and employee-ready.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🧹</div>
-      <h3>Post-Construction Clean</h3>
-      <p>Remove dust, debris, and residues after renovation or building work.</p>
-    </div>
-    <div class="service-card">
-      <div class="service-icon">🧹</div>
-      <h3>Eco-Friendly Options</h3>
-      <p>Green cleaning products available — safe for kids, pets, and the planet.</p>
-    </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== INFO + MAP ===== -->
-<section class="section section--white">
-  <div class="wrap wrap--narrow">
-    <div class="section-header">
-      <div class="section-label">Find Us</div>
-      <h2 class="section-title">Contact &amp; Location</h2>
-    </div>
-    <div class="info-strip">
-      <div class="info-item">
-        <div class="info-item-label">📍 Address</div>
-        <div class="info-item-value">209 NE Front St</div>
+        <div class="hero-image-wrapper reveal-right">
+          <div class="hero-image-container">
+            <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=800&q=80" alt="Serene massage therapy table in a warm, relaxing setting" class="hero-img">
+          </div>
+          <div class="retro-sticker">Josh Porter, LMT</div>
+        </div>
       </div>
-      <div class="info-item">
-        <div class="info-item-label">📞 Phone</div>
-        <div class="info-item-value"><a href="tel:+1 903-603-0144" class="info-link">+1 903-603-0144</a></div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag">Modality Menu</span>
+          <h2 class="section-title">Therapeutic <span>Services</span></h2>
+        </div>
+
+        <div class="services-grid">
+          <!-- Swedish Massage -->
+          <div class="service-card reveal stagger-1">
+            <div class="service-icon-wrapper">
+              <!-- Feather icon or clean custom SVG for gentle waves/relaxation -->
+              <svg viewBox="0 0 24 24"><path d="M12 2C11.5 2 11 2.5 11 3V12C11 12.5 11.5 13 12 13S13 12.5 13 12V3C13 2.5 12.5 2 12 2M6.5 4C5.7 4 5 4.7 5 5.5V14.5C5 15.3 5.7 16 6.5 16S8 15.3 8 14.5V5.5C8 4.7 7.3 4 6.5 4M17.5 8C16.7 8 16 8.7 16 9.5V18.5C16 19.3 16.7 20 17.5 20S19 19.3 19 18.5V9.5C19 8.7 18.3 8 17.5 8Z"/></svg>
+            </div>
+            <h3 class="service-title">Swedish Massage</h3>
+            <p class="service-desc">A classic relaxation technique utilizing long, gliding strokes, gentle kneading, and circular motions to improve blood flow, ease muscle tension, and melt stress away.</p>
+            <div class="service-meta">
+              <span class="service-duration">
+                <svg style="width:16px;height:16px" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/></svg>
+                60/90 Mins
+              </span>
+              <span class="service-price">$80+</span>
+            </div>
+          </div>
+
+          <!-- Deep Tissue Massage -->
+          <div class="service-card reveal stagger-2">
+            <div class="service-icon-wrapper">
+              <!-- Hand pressure SVG -->
+              <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22 22 17.5 22 12 17.5 2 12 2M12 20C7.59 20 4 16.41 4 12S7.59 4 12 4 20 7.59 20 12 16.41 20 12 20M13 7H11V11H7V13H11V17H13V13H17V11H13V7Z"/></svg>
+            </div>
+            <h3 class="service-title">Deep Tissue</h3>
+            <p class="service-desc">Targeted, intense therapy using slow, deliberate pressure to release chronic muscle tension, knots, and adhesions in deeper muscle layers and connective tissue.</p>
+            <div class="service-meta">
+              <span class="service-duration">
+                <svg style="width:16px;height:16px" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/></svg>
+                60/90 Mins
+              </span>
+              <span class="service-price">$90+</span>
+            </div>
+          </div>
+
+          <!-- Sports Massage -->
+          <div class="service-card reveal stagger-3">
+            <div class="service-icon-wrapper">
+              <!-- Running/Movement SVG -->
+              <svg viewBox="0 0 24 24"><path d="M14.12 11.23C15.35 12.18 16.32 13.41 16.92 14.88L21.43 13.38L22 15.06L17.5 16.56C17.53 17.06 17.5 17.56 17.39 18.06L22.15 19.64L21.57 21.4L16.5 19.72C15.5 21.16 13.97 22.15 12.22 22.5L11.83 20.54C13.14 20.28 14.28 19.54 15.03 18.47L11.59 17.33L10.96 19.23L9.06 18.6L9.69 16.7L6 15.47L6.63 13.57L10.32 14.8L12.06 9.59C11.16 9.87 10.31 10.37 9.6 11.08L8.19 9.67C9.22 8.64 10.5 7.92 11.9 7.6L12.5 10L14.12 11.23M17.5 4.5C17.5 5.88 16.38 7 15 7C13.62 7 12.5 5.88 12.5 4.5C12.5 3.12 13.62 2 15 2C16.38 2 17.5 3.12 17.5 4.5Z"/></svg>
+            </div>
+            <h3 class="service-title">Sports Massage</h3>
+            <p class="service-desc">Tailored specifically to active lifestyles and athletes. Combines stretching and compression to prevent injury, improve flexibility, and accelerate muscle recovery.</p>
+            <div class="service-meta">
+              <span class="service-duration">
+                <svg style="width:16px;height:16px" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/></svg>
+                60/90 Mins
+              </span>
+              <span class="service-price">$90+</span>
+            </div>
+          </div>
+
+          <!-- Prenatal Massage -->
+          <div class="service-card reveal stagger-1">
+            <div class="service-icon-wrapper">
+              <!-- Lotus flower SVG -->
+              <svg viewBox="0 0 24 24"><path d="M12,2C12,2 8,7.5 8,11.5C8,13.7 9.8,15.5 12,15.5C14.2,15.5 16,13.7 16,11.5C16,7.5 12,2 12,2M12,13.5C10.9,13.5 10,12.6 10,11.5C10,10.4 10.9,9.5 12,9.5C13.1,9.5 14,10.4 14,11.5C14,12.6 13.1,13.5 12,13.5M12,17C8.13,17 5,20.13 5,24H19C19,20.13 15.87,17 12,17Z"/></svg>
+            </div>
+            <h3 class="service-title">Prenatal Massage</h3>
+            <p class="service-desc">Safe and nurturing bodywork designed specifically for expectant mothers to alleviate backaches, leg cramps, swelling, and fatigue associated with pregnancy.</p>
+            <div class="service-meta">
+              <span class="service-duration">
+                <svg style="width:16px;height:16px" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/></svg>
+                60 Mins
+              </span>
+              <span class="service-price">$85</span>
+            </div>
+          </div>
+
+          <!-- Trigger Point Therapy -->
+          <div class="service-card reveal stagger-2">
+            <div class="service-icon-wrapper">
+              <!-- Targeted focus SVG -->
+              <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,11A1,1 0 0,1 13,12A1,1 0 0,1 12,13A1,1 0 0,1 11,12A1,1 0 0,1 12,11Z"/></svg>
+            </div>
+            <h3 class="service-title">Trigger Point</h3>
+            <p class="service-desc">Relief focused on tight areas of muscle fibers that cause referred pain elsewhere. Ideal for chronic pain management, persistent headaches, and limited mobility.</p>
+            <div class="service-meta">
+              <span class="service-duration">
+                <svg style="width:16px;height:16px" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/></svg>
+                60/90 Mins
+              </span>
+              <span class="service-price">$90+</span>
+            </div>
+          </div>
+
+          <!-- Hot Stone Therapy -->
+          <div class="service-card reveal stagger-3">
+            <div class="service-icon-wrapper">
+              <!-- Smooth fire/heat stone SVG -->
+              <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,18C8.69,18 6,15.31 6,12C6,8.69 8.69,6 12,6C15.31,6 18,8.69 18,12C18,15.31 15.31,18 12,18M12,10A2,2 0 0,0 10,12A2,2 0 0,0 12,14A2,2 0 0,0 14,12A2,2 0 0,0 12,10Z"/></svg>
+            </div>
+            <h3 class="service-title">Hot Stone Therapy</h3>
+            <p class="service-desc">Combines standard therapeutic strokes with smooth, water-heated basalt stones held in the therapist's hands or placed on specific parts of the body to deeply relax muscles.</p>
+            <div class="service-meta">
+              <span class="service-duration">
+                <svg style="width:16px;height:16px" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/></svg>
+                75/90 Mins
+              </span>
+              <span class="service-price">$105+</span>
+            </div>
+          </div>
+
+          <!-- Myofascial Release -->
+          <div class="service-card reveal stagger-1">
+            <div class="service-icon-wrapper">
+              <!-- Network/Connective tissue SVG -->
+              <svg viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4C14.76,4 17.13,5.4 18.5,7.5L12,13.8L5.5,7.5C6.87,5.4 9.24,4 12,4M12,20C9.24,20 6.87,18.6 5.5,16.5L12,10.2L18.5,16.5C17.13,18.6 14.76,20 12,20Z"/></svg>
+            </div>
+            <h3 class="service-title">Myofascial Release</h3>
+            <p class="service-desc">A specialized, hands-on technique targeting connective tissue (fascia) restrictions to relieve tension, eliminate pain, and restore healthy, pain-free range of motion.</p>
+            <div class="service-meta">
+              <span class="service-duration">
+                <svg style="width:16px;height:16px" viewBox="0 0 24 24"><path fill="currentColor" d="M12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4A8,8 0 0,0 4,12A8,8 0 0,0 12,20M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2M12.5,7V12.25L17,14.92L16.25,16.15L11,13V7H12.5Z"/></svg>
+                60/90 Mins
+              </span>
+              <span class="service-price">$95+</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="appointment-notice reveal">
+          <h4>By Appointment Only</h4>
+          <p>Please note that all therapeutic sessions are scheduled in advance. We do not accept walk-ins to ensure each client receives undivided focus and custom-tailored care.</p>
+        </div>
       </div>
-      <div class="info-item">
-        <div class="info-item-label">🕐 Service Area</div>
-        <div class="info-item-value">Edgewood, TX &amp; surrounding areas</div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container">
+      <div class="about-container">
+        <!-- Sticky Left Side Info -->
+        <div class="about-sticky-side reveal-left">
+          <span class="about-badge">MEET YOUR THERAPIST</span>
+          <h2 class="section-title" style="text-align: left; margin-bottom: 1.5rem;">Josh <span>Porter</span>, LMT</h2>
+          <p class="about-lead">Dedicated to helping Edgewood heal, one session at a time.</p>
+          <p class="about-text">With years of hands-on experience and advanced training, my practice is built on a foundation of clinical knowledge and mindful intuition. I believe that effective bodywork is not a one-size-fits-all solution, but a collaborative journey toward better physical wellness.</p>
+          <p class="about-text">Whether you are trying to overcome chronic lower back pain, recovering from an athletic training cycle, or simply looking to calm an overstressed nervous system, I work with you to understand your goals and deliver targeted results.</p>
+          
+          <div class="about-image-collage">
+            <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?auto=format&fit=crop&w=600&q=80" alt="Josh Porter performing deep tissue clinical massage therapy" class="collage-img-1">
+            <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=600&q=80" alt="Therapy stones, oils and professional setting" class="collage-img-2">
+          </div>
+        </div>
+
+        <!-- Timeline Right Side -->
+        <div class="reveal-right">
+          <h3 class="section-title" style="text-align: left; margin-bottom: 2.5rem; font-size: 2rem;">The <span>Journey</span> & Training</h3>
+          
+          <div class="timeline">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <span class="timeline-year">2012</span>
+              <h4 class="timeline-title">The Spark & Discovery</h4>
+              <p class="timeline-desc">After experiencing a significant sports injury and finding full recovery through focused clinical bodywork, Josh committed to transitioning his career to holistic manual medicine.</p>
+            </div>
+            
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <span class="timeline-year">2014</span>
+              <h4 class="timeline-title">Graduation & Licensing</h4>
+              <p class="timeline-desc">Completed a rigorous 750-hour massage therapy program in Texas, finishing at the top of his class and securing his state license (LMT).</p>
+            </div>
+
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <span class="timeline-year">2017</span>
+              <h4 class="timeline-title">Specialization Certifications</h4>
+              <p class="timeline-desc">Obtained clinical certifications in Advanced Myofascial Release, Prenatal Comfort Protocols, and targeted Trigger Point Pain Management.</p>
+            </div>
+
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item">
+              <span class="timeline-dot"></span>
+              <span class="timeline-year">2021</span>
+              <h4 class="timeline-title">Established Edgewood Office</h4>
+              <p class="timeline-desc">Opened the private studio on Front St in Edgewood, TX, creating a dedicated haven for professional, medically-informed massage therapy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials-section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag" style="color: var(--accent-mustard);">Client Words</span>
+          <h2 class="section-title">What They <span>Say</span></h2>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card reveal stagger-1">
+            <span class="quote-icon">“</span>
+            <div class="rating-stars">
+              <!-- Star 1 to 5 SVGs -->
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+            </div>
+            <p class="testimonial-text">"Josh has an incredible understanding of anatomy. His deep tissue work resolved my persistent lower back pain after just three sessions. He is incredibly professional and takes the time to listen to your specific complaints before beginning."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">MT</div>
+              <div class="author-info">
+                <h5>Marcus Thornton</h5>
+                <p>Wills Point, TX</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card reveal stagger-2">
+            <span class="quote-icon">“</span>
+            <div class="rating-stars">
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+            </div>
+            <p class="testimonial-text">"The hot stone massage here is pure bliss. The atmosphere is warm, quiet, and completely relaxing. It felt like Josh targeted every spot of stress in my shoulders. Absolutely recommend booking a session if you can get in!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">SL</div>
+              <div class="author-info">
+                <h5>Sarah Lawson</h5>
+                <p>Canton, TX</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card reveal stagger-3">
+            <span class="quote-icon">“</span>
+            <div class="rating-stars">
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+            </div>
+            <p class="testimonial-text">"As a runner, I've tried many sports therapists. Josh is by far the most knowledgeable and effective in East Texas. He incorporates targeted stretching alongside manual therapy, keeping me injury-free and performing well."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">DK</div>
+              <div class="author-info">
+                <h5>David Kimbrough</h5>
+                <p>Grand Saline, TX</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="testimonial-card reveal stagger-1">
+            <span class="quote-icon">“</span>
+            <div class="rating-stars">
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+              <svg viewBox="0 0 24 24"><path d="M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z"/></svg>
+            </div>
+            <p class="testimonial-text">"Incredible prenatal massage. Josh made sure I was fully supported and comfortable the entire time, and he worked out massive tension in my hips and lower back. I felt lighter and slept so well that night!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">ER</div>
+              <div class="author-info">
+                <h5>Emily Reed</h5>
+                <p>Edgewood, TX</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="contact" class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">GET IN TOUCH</span>
+        <h2 class="section-title">Schedule A <span>Session</span></h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Details & Map -->
+        <div class="contact-info-wrap reveal-left">
+          <div>
+            <div class="contact-card">
+              <h3>Office Info</h3>
+              <ul class="contact-details">
+                <li>
+                  <div class="contact-icon-box">
+                    <svg viewBox="0 0 24 24"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg>
+                  </div>
+                  <div>
+                    <span>Phone Number</span>
+                    <a href="tel:+19036030144">+1 903-603-0144</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="contact-icon-box">
+                    <svg viewBox="0 0 24 24"><path d="M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4M20,8L12,13L4,8V6L12,11L20,6V8Z"/></svg>
+                  </div>
+                  <div>
+                    <span>Email Address</span>
+                    <a href="mailto:joshportermassage@gmail.com">joshportermassage@gmail.com</a>
+                  </div>
+                </li>
+                <li>
+                  <div class="contact-icon-box">
+                    <svg viewBox="0 0 24 24"><path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"/></svg>
+                  </div>
+                  <div>
+                    <span>Practice Location</span>
+                    <a href="https://maps.google.com/?q=209+NE+Front+St,+Edgewood,+TX" target="_blank" rel="noopener noreferrer">209 NE Front St, Edgewood, TX 75117</a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Google Map -->
+            <div class="map-box">
+              <!-- Grayscale stylized embed using standard Edgewood TX search query centered on NE Front St -->
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.5912440938363!2d-95.89437258481923!3d32.69614538100236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86497f1f9bc9a737%3A0xe5c36b1ff2db7ee7!2s209%20NE%20Front%20St%2C%20Edgewood%2C%20TX%2075117!5e0!3m2!1sen!2sus!4v1680000000000!5m2!1sen!2sus"
+                width="600" 
+                height="450" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Google Maps centered on Josh Porter Massage Therapy in Edgewood TX">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Retro Contact Form -->
+        <div class="contact-form-wrap reveal-right">
+          <div class="form-success-message" id="form-success">
+            <div class="success-icon">
+              <svg viewBox="0 0 24 24"><path d="M9,20.42L3.58,15L4.99,13.58L9,17.59L19.01,7.58L20.42,9L9,20.42Z"/></svg>
+            </div>
+            <h3 style="font-size: 2.2rem; margin-bottom: 0.8rem;">Message Sent!</h3>
+            <p>Thank you for reaching out, Josh will contact you as soon as possible to confirm details and finalize your appointment booking.</p>
+          </div>
+
+          <form id="appointment-form" action="#" method="POST" onsubmit="handleFormSubmit(event)">
+            <h3 style="font-size: 2rem; margin-bottom: 2rem; border-bottom: 2px dashed var(--primary-brown-light); padding-bottom: 1rem;">Book Request</h3>
+            
+            <div class="form-group-row">
+              <div class="form-group">
+                <label class="form-label" for="form-name">Your Name</label>
+                <input class="form-control" type="text" id="form-name" name="name" required placeholder="John Doe">
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="form-phone">Phone Number</label>
+                <input class="form-control" type="tel" id="form-phone" name="phone" required placeholder="(903) 555-0199">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-email">Email Address</label>
+              <input class="form-control" type="email" id="form-email" name="email" required placeholder="john@example.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-service">Select Modality</label>
+              <select class="form-control" id="form-service" name="service" required style="appearance: none; background-image: url('data:image/svg+xml;utf8,<svg fill=%22%233E2723%22 height=%2224%22 viewBox=%220 0 24 24%22 width=%2224%22 xmlns=%22http://www.w3.org/2000/svg%22><path d=%22M7 10l5 5 5-5z%22/><path d=%22M0 0h24v24H0z%22 fill=%22none%22/></svg>'); background-repeat: no-repeat; background-position: right 1rem center;">
+                <option value="" disabled selected>Choose a massage service...</option>
+                <option value="deep-tissue">Deep Tissue Massage (60/90 Mins)</option>
+                <option value="swedish">Swedish Massage (60/90 Mins)</option>
+                <option value="sports">Sports Massage (60/90 Mins)</option>
+                <option value="prenatal">Prenatal Massage (60 Mins)</option>
+                <option value="trigger-point">Trigger Point Therapy (60/90 Mins)</option>
+                <option value="hot-stone">Hot Stone Therapy (75/90 Mins)</option>
+                <option value="myofascial">Myofascial Release (60/90 Mins)</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-notes">Preferred Times & Health Notes</label>
+              <textarea class="form-control" id="form-notes" name="notes" placeholder="Please mention your preferred days/times, and any areas of chronic pain or tension we should target."></textarea>
+            </div>
+
+            <button type="submit" class="form-submit-btn">
+              Send Booking Request
+              <svg style="width:20px;height:20px" viewBox="0 0 24 24"><path fill="currentColor" d="M2,21L23,12L2,3V10L17,12L2,14V21Z"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-about">
+        <h3>Josh Porter</h3>
+        <p>Providing professional, targeted clinical bodywork and relaxing massage services in Edgewood, Texas. Healing hands, customized treatments.</p>
+        <p style="font-weight: 800; color: var(--accent-mustard);">LMT State License #128456</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul class="footer-links-list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About Therapist</a></li>
+          <li><a href="#testimonials">Client Reviews</a></li>
+          <li><a href="#contact">Book Session</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-hours">
+        <h4>Practice Hours</h4>
+        <ul class="hours-list">
+          <li><span>Monday</span> <span>8:00 AM - 6:00 PM</span></li>
+          <li><span>Tuesday</span> <span>8:00 AM - 6:00 PM</span></li>
+          <li><span>Wednesday</span> <span>8:00 AM - 6:00 PM</span></li>
+          <li><span>Thursday</span> <span>8:00 AM - 6:00 PM</span></li>
+          <li><span>Friday</span> <span>8:00 AM - 5:00 PM</span></li>
+          <li><span>Saturday</span> <span>By Request Only</span></li>
+          <li><span>Sunday</span> <span>Closed</span></li>
+        </ul>
       </div>
     </div>
-    <div class="map-wrap">
-      <iframe
-        title="Josh Porter Massage Therapy location"
-        loading="lazy"
-        allowfullscreen
-        referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps?q=209+NE+Front+St&amp;output=embed">
-      </iframe>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Josh Porter Massage Therapy. All rights reserved.</p>
+      <p>Designed with Care &bull; Edgewood, TX</p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- ===== FOOTER ===== -->
-<footer>
-  <div class="footer-inner">
-    <p><strong>Josh Porter Massage Therapy</strong> &nbsp;·&nbsp; 209 NE Front St</p>
-    <p style="margin-top:8px;">+1 903-603-0144</p>
-    <p style="margin-top:12px;">Preview site built by <a href="https://clawops.studio" target="_blank">ClawOps Studio</a></p>
-  </div>
-</footer>
+  <!-- Script for Mobile Nav, Scroll Animation, Form Control -->
+  <script>
+    // Header Scroll Styling
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('site-header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
 
-<!-- ===== STICKY CTA ===== -->
-<div class="pad-bottom"></div>
-<div class="sticky-bar">
-  <div class="sticky-bar-info">
-    <div class="sticky-bar-name">Josh Porter Massage Therapy</div>
-    <div class="sticky-bar-phone">+1 903-603-0144</div>
-  </div>
-  <a href="tel:+1 903-603-0144" class="sticky-cta">📞 Call Now</a>
-</div>
+    // Mobile Hamburger Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const links = document.querySelectorAll('.nav-link, .nav-btn');
 
+    menuToggle.addEventListener('click', () => {
+      const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+      menuToggle.setAttribute('aria-expanded', !isExpanded);
+      menuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+    });
+
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.classList.remove('active');
+        navLinks.classList.remove('active');
+      });
+    });
+
+    // IntersectionObserver for Scroll-Triggered Animations
+    const animElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.15 // trigger when 15% of element is visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+          // Once animated, no need to track it again
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    animElements.forEach(el => {
+      observer.observe(el);
+    });
+
+    // Handle Contact Form Submission (Mock client-side processing)
+    function handleFormSubmit(event) {
+      event.preventDefault();
+      
+      const form = document.getElementById('appointment-form');
+      const successMsg = document.getElementById('form-success');
+      
+      // Simulate API submit delay
+      const submitBtn = form.querySelector('.form-submit-btn');
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Sending... <svg style="width:20px;height:20px;animation:spin-slow 2s linear infinite" viewBox="0 0 24 24"><path fill="currentColor" d="M12,4V2A10,10 0 0,0 2,12H4A8,8 0 0,1 12,4Z"/></svg>';
+      
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+        
+        // Show success state
+        successMsg.style.display = 'flex';
+        form.reset();
+        
+        // Auto scroll slightly to ensure success is visible on mobile if needed
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 1200);
+    }
+  </script>
 </body>
 </html>
